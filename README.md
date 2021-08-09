@@ -1,5 +1,5 @@
 # Theme_With_Javascript
-A simple and easy way of applying theme effects using Javascript
+A simple and easy way of applying theme effect to your web app using Javascript
 
 ## Screenshots 
 > ### Theme preview 1
