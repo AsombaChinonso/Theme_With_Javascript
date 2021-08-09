@@ -14,3 +14,4 @@ A simple and easy way of applying theme effects using Javascript
 Ideas and contribution are welcome.
 To collaborate on a project, reach me at asomba505@gmail.com
 Thank you!
+<img src="./Screenshots/download__5_-removebg-preview.png"  width="20px" />
