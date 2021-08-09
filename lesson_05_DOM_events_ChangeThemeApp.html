@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <style>
+        body {
+            padding: 30px;
+            /* color: rgb(0, 92, 134); */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="col-md-2">
+            <h3 class="text-center">Welcome</h3>
+            <div class="jumbotron text-center bg-dark">
+                <a class="btn btn-light btn-lg " onclick="changeTheme()"> Theme 1</a>
+            </div>
+
+
+            <div class="jumbotron text-center bg-dark">
+                <button class="btn btn-light btn-lg changeTheme">Theme 2</button>
+            </div>
+
+            <div class="jumbotron text-center bg-dark">
+                <button class="btn btn-light btn-lg changeThemeThree">Theme 3</button>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="jumbotron bg-light">
+                <h3 class="text-center display-1 ">Theme View</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- My javascript -->
+    <script>
+        // Option 1 - use a onclick event 
+        function changeTheme() {
+            document.body.style.backgroundColor = "chartreuse";
+            document.querySelector('h3').style.color = "rgb(12, 78, 0)";
+            document.querySelector('.display-1').style.color = "chartreuse";
+        }
+
+
+        // Option 2 - use a property on HTML to create an event
+        const changeThemeColor = document.querySelector('.changeTheme');
+        changeThemeColor.onclick = function () {
+            document.body.style.backgroundColor = "darkgoldenrod";
+            document.querySelector('h3').style.color = "black";
+            document.querySelector('.display-1').style.color = "darkgoldenrod";
+        }
+
+        // changeThemeColor.onmouseenter = changeTheme;
+
+        // Option 3 - adds events listener to proprty on HTml
+
+        const changeThemeThreeColor = document.querySelector('.changeThemeThree');
+
+        function changeTheme3() {
+            document.querySelector('h3', ).style.color = "white";
+            document.querySelector('.display-1').style.color = "rgb(0, 92, 134)";
+            document.body.style.backgroundColor = "rgb(0, 92, 134)";
+        }
+
+        changeThemeThreeColor.addEventListener('click', changeTheme3);
+
+        // Can also take a mouse event
+        // changeThemeThreeColor.addEventListener('mouseenter', changeTheme3);
+
+
+
+
+
+        // const body = document.querySelector('body');
+        // body.style.backgroundColor = "#c00c00";
+    </script>
+</body>
+
+</html>
